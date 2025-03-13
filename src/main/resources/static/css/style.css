@@ -1,0 +1,155 @@
+/*.brand-font {*/
+/*    font-family: 'Playfair Display', serif;*/
+/*    font-weight: 700;*/
+/*}*/
+
+/*.product-card {*/
+/*    height: 100%;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    transition: transform 0.3s;*/
+/*}*/
+
+/*.card-body {*/
+/*    flex-grow: 1;*/
+/*}*/
+
+/*.product-card:hover {*/
+/*    transform: translateY(-5px);*/
+/*}*/
+
+.card-img-top {
+    height: 400px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    object-fit: cover;
+}
+
+.navbar {
+    background-color: #15171B !important;
+    color: white;
+}
+
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.navbar .nav-link:hover {
+    color: #0786B5 !important;
+    transition: all 0.3s;
+}
+
+/* Цвет бренда (логотипа) */
+.navbar-brand {
+    color: white !important;
+}
+
+.navbar-brand:hover {
+    color: #A3E6FF !important;
+    transition: all 0.3s;
+}
+
+
+.footer {
+    background-color: #15171B !important;
+    color: white;
+    padding: 2rem 0;
+    margin-top: auto;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #191C20;
+}
+
+main {
+    flex: 1;
+}
+
+
+/* цвета текста новостной карточки */
+.brand-font {
+    color: white;
+    font-weight: 600;
+}
+
+.news-card {
+    color: white;
+    transition: all 0.3s;
+}
+
+.news-card:hover {
+    color: white;
+}
+
+
+/*!* цвета новостной карточки *!*/
+.news-card {
+    background-color: #15171B;
+    border: 2px solid #383A3D;
+    border-radius: 24px;
+    transition: all 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-outline-dark {
+    color: #0786B5;
+    border: 2px solid #0786B5;
+    border-radius: 12px;
+}
+
+.btn-outline-dark:hover {
+    color: #0786B5;
+    background-color: #A3E6FF;
+}
+
+/* цвета карточки товара */
+.product-card {
+    background-color: #15171B;
+    border: 2px solid #383A3D;
+    border-radius: 24px;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    color: white !important;
+}
+
+.text-muted {
+    color: white !important;
+}
+
+.text-center {
+    color: white !important;
+}
+
+.section-title {
+    color: white;
+    margin-bottom: 24px;
+}
+.history-section {
+    border: none;
+    border-radius: 24px;
+    background-color: #15171B;
+}
+.contact-card {
+    border: none;
+    border-radius: 24px;
+    transition: transform 0.3s;
+    color: white;
+    background-color: #15171B;
+}
