@@ -1,7 +1,7 @@
-package ru.kupidji.web_labs.repository
+package ru.kupidji.moonlight.repository
 
 import org.springframework.data.jpa.repository.JpaRepository
-import ru.kupidji.web_labs.model.Product
+import ru.kupidji.moonlight.model.Product
 
 
 interface ProductRepository : JpaRepository<Product, Long>

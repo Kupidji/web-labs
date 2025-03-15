@@ -1,11 +1,11 @@
-package ru.kupidji.web_labs
+package ru.kupidji.moonlight
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class WebLabsApplication
+class MoonlightApplication
 
 fun main(args: Array<String>) {
-	runApplication<WebLabsApplication>(*args)
+    runApplication<MoonlightApplication>(*args)
 }

@@ -1,11 +1,11 @@
-package ru.kupidji.web_labs.controller
+package ru.kupidji.moonlight.controller
 
 import lombok.AllArgsConstructor
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
-import ru.kupidji.web_labs.repository.ProductRepository
+import ru.kupidji.moonlight.repository.ProductRepository
 
 @Controller
 @AllArgsConstructor

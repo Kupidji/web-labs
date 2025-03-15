@@ -1,4 +1,4 @@
-package ru.kupidji.web_labs.model
+package ru.kupidji.moonlight.model
 
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.Positive
