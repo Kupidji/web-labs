@@ -3,7 +3,6 @@ package ru.kupidji.moonlight.model
 import jakarta.persistence.*
 import lombok.Getter
 import lombok.NoArgsConstructor
-import lombok.extern.slf4j.Slf4j
 import org.hibernate.annotations.DynamicInsert
 import java.time.LocalDateTime
 
@@ -17,10 +16,6 @@ data class Order(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     var id: Long = 0,
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    //@JoinColumn(name = "product_id", nullable = false)
-    var product: Product,
 
     @Column(name = "total_price", nullable = false)
     var totalPrice: Double,
@@ -53,7 +48,11 @@ data class Order(
     var comment: String? = null,
 
     @Column(name = "order_date", nullable = false, columnDefinition = "timestamp")
-    var orderDate: LocalDateTime = LocalDateTime.now()
+    var orderDate: LocalDateTime = LocalDateTime.now(),
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "product_id", nullable = false)
+    var product: Product,
 ) {
     constructor(dto: OrderDTO, product: Product) : this(
         product = product,

@@ -43,7 +43,7 @@ class SecurityConfig {
             .logout { logout: LogoutConfigurer<HttpSecurity?> ->
                 logout
                     .logoutUrl("/logout")
-                    .logoutSuccessUrl("/")
+                    .logoutSuccessUrl("/login")
                     .permitAll()
             }
             .build()
@@ -58,7 +58,7 @@ class SecurityConfig {
     fun userDetailsService(passwordEncoder: PasswordEncoder): UserDetailsService {
         val user: UserDetails = User.builder()
             .username("admin")
-            .password("easyhost")
+            .password("password")
             .passwordEncoder { rawPassword: CharSequence? -> passwordEncoder.encode(rawPassword) }
             .build()
 

@@ -1,0 +1,34 @@
+<section th:fragment="content">
+    <div class="container">
+        <div class="form-section">
+            <h2 class="text-center mb-4 brand-font" th:text="${formTitle}"></h2>
+            <form action="" method="post">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Название</label>
+                        <input type="text" id="name" class="form-control" name="name" th:field="*{product.name}" required>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Цена (₽)</label>
+                        <input type="text" id="price" class="form-control" name="price" th:field="*{product.price}" required>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <label class="form-label">URL изображения</label>
+                        <input type="url" id="imageUrl" class="form-control" name="imageUrl" th:field="*{product.imageUrl}" required>
+                    </div>
+
+                    <div class="col-12 mb-4">
+                        <label class="form-label">Описание</label>
+                        <textarea class="form-control" id="description" name="description" th:field="*{product.description}" rows="4"></textarea>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn submit-btn px-5" th:value="${formButton}">Создать</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

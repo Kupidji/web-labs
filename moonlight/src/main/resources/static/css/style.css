@@ -283,3 +283,34 @@ main {
     -moz-appearance: textfield; /* Firefox */
     appearance: textfield; /* Другие браузеры */
 }
+
+/* Админ-панель */
+.admin-table {
+    background: #15171B;
+    border-radius: 24px;
+    border: 2px solid #383A3D;
+    overflow: hidden;
+}
+
+.admin-table th {
+    background: #0786B5;
+    color: white !important;
+    padding: 1rem;
+    border-bottom: none !important;
+}
+
+.admin-table td {
+    padding: 1rem;
+    vertical-align: middle;
+    color: white !important;
+}
+
+.btn-outline-info {
+    border-color: #0786B5;
+    color: #0786B5;
+}
+
+.btn-outline-info:hover {
+    background: #0786B5;
+    color: white;
+}
