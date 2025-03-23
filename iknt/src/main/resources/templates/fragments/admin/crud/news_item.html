@@ -1,0 +1,66 @@
+<div th:fragment="content" class="admin-edit-form">
+    <div class="admin-form-header mb-5">
+        <h2 class="mb-3" th:text="${formTitle}"></h2>
+        <a th:href="@{/admin/news}" class="text-decoration-none">
+            <i class="bi bi-arrow-left me-2"></i>Вернуться к списку
+        </a>
+    </div>
+
+    <form class="auth-card" method="post">
+        <div class="form-grid">
+            <!-- Заголовок -->
+            <div class="form-field">
+                <label for="title" class="form-label">Заголовок новости</label>
+                <input type="text"
+                       id="title"
+                       name="title"
+                       class="form-control"
+                       placeholder="Введите заголовок"
+                       th:value="${newsItem.title}?: ''"
+                       required>
+            </div>
+
+            <!-- Обложка -->
+            <div class="form-field">
+                <label for="cover_url" class="form-label">Ссылка на обложку</label>
+                <input type="url"
+                       id="cover_url"
+                       name="coverUrl"
+                       class="form-control"
+                       placeholder="https://example.com/image.jpg"
+                       th:value="${newsItem.coverUrl}?: ''">
+                <small class="form-text text-muted">Необязательное поле</small>
+            </div>
+
+            <!-- Дата публикации -->
+            <div class="form-field">
+                <label for="published_at" class="form-label">Дата публикации</label>
+                <input type="date"
+                       id="published_at"
+                       name="publishedAt"
+                       class="form-control"
+                       th:value="${newsItem.publishedAt}?: ${todayDate}"
+                       required>
+            </div>
+
+            <!-- Контент -->
+            <div class="form-field full-width">
+                <label for="content" class="form-label">Содержание новости</label>
+                <textarea id="content"
+                          name="content"
+                          class="form-control"
+                          rows="6"
+                          placeholder="Введите текст новости..."
+                          th:text="${newsItem.content}?: ''"
+                          required></textarea>
+            </div>
+        </div>
+
+        <div class="form-actions mt-5">
+            <button type="submit" class="submit-btn primary">
+                <i class="bi bi-save me-2"></i>
+                <span th:text="${formButton}"></span>
+            </button>
+        </div>
+    </form>
+</div>

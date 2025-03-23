@@ -1,0 +1,98 @@
+<div th:fragment="content" class="admin-edit-form">
+    <div class="admin-form-header mb-5">
+        <h2 class="mb-3" th:text="${formTitle}"></h2>
+        <a th:href="@{/admin/teachers}" class="text-decoration-none">
+            <i class="bi bi-arrow-left me-2"></i>Вернуться к списку
+        </a>
+    </div>
+
+    <form class="auth-card" method="post">
+        <div class="form-grid">
+            <div class="form-field">
+                <label for="lastName" class="form-label">Фамилия</label>
+                <input type="text"
+                       id="lastName"
+                       name="lastName"
+                       class="form-control"
+                       placeholder="Иванов"
+                       th:value="${teacher.lastName}?: ''"
+                       required>
+            </div>
+
+            <div class="form-field">
+                <label for="firstName" class="form-label">Имя</label>
+                <input type="text"
+                       id="firstName"
+                       name="firstName"
+                       class="form-control"
+                       placeholder="Алексей"
+                       th:value="${teacher.firstName}?: ''"
+                       required>
+            </div>
+
+            <div class="form-field">
+                <label for="middleName" class="form-label">Отчество</label>
+                <input type="text"
+                       id="middleName"
+                       name="middleName"
+                       class="form-control"
+                       placeholder="Петрович"
+                       th:value="${teacher.middleName}?: ''">
+            </div>
+
+            <!-- Дата рождения -->
+            <div class="form-field">
+                <label for="birthDate" class="form-label">Дата рождения</label>
+                <input type="date"
+                       id="birthDate"
+                       name="birthDate"
+                       class="form-control"
+                       th:value="${teacher.birthDate}?: ''"
+                       required>
+            </div>
+
+            <!-- Кафедра и опыт -->
+            <div class="form-field">
+                <label for="department" class="form-label">Кафедра</label>
+                <input type="text"
+                       id="department"
+                       name="department"
+                       class="form-control"
+                       placeholder="Программной инженерии"
+                       th:value="${teacher.department}?: ''"
+                       required>
+            </div>
+
+            <div class="form-field">
+                <label for="experience" class="form-label">Опыт работы (лет)</label>
+                <input type="number"
+                       id="experience"
+                       name="experience"
+                       class="form-control"
+                       min="0"
+                       max="60"
+                       th:value="${teacher.experience}?: 0"
+                       required>
+            </div>
+
+            <!-- Фото -->
+            <div class="form-field full-width">
+                <label for="photoUrl" class="form-label">Ссылка на фото</label>
+                <input type="url"
+                       id="photoUrl"
+                       name="photoUrl"
+                       class="form-control"
+                       placeholder="https://example.com/photo.jpg"
+                       th:value="${teacher.photoUrl}?: ''">
+                <small class="form-text text-muted">Рекомендуемый размер: 400×500 px</small>
+            </div>
+        </div>
+
+        <div class="form-actions mt-5">
+            <button type="submit" class="submit-btn primary">
+                <i class="bi bi-save me-2"></i>
+                <span th:text="${formButton}"></span>
+            </button>
+        </div>
+    </form>
+</div>
