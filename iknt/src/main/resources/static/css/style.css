@@ -1,0 +1,142 @@
+html {
+    height: 100%;
+}
+
+:root {
+    --primary-color: #1A66FF;
+    --background-color: #FEFFFE;
+    --text-color: #000000;
+    --secondary-gray: #B4B8C5;
+    --accent-gray: #A5A299;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.navbar, .footer {
+    background-color: var(--primary-color) !important;
+    color: var(--background-color) !important;
+}
+
+.navbar .nav-link {
+    color: var(--background-color) !important;
+}
+
+.navbar .nav-link:hover {
+    color: var(--secondary-gray) !important;
+    transition: all 0.3s;
+}
+
+.card {
+    border: 1px solid var(--secondary-gray);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.news-date {
+    color: var(--accent-gray);
+    font-size: 0.9rem;
+}
+
+.news-image {
+    height: 150px;
+    object-fit: cover;
+    width: 100%; /* Для сохранения пропорций */
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #0051cc;
+    border-color: #0051cc;
+}
+
+.director-name {
+    color: var(--primary-color);
+    border-left: 4px solid var(--accent-gray);
+    padding-left: 1rem;
+}
+
+.section-title {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-gray);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer {
+    color: var(--background-color);
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.accordion-button:not(.collapsed) .bi-chevron-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+.accordion-button .bi-chevron-down {
+    transition: transform 0.3s ease;
+}
+.accordion-button {
+    font-weight: 500;
+    padding: 1rem 0;
+}
+.accordion-body {
+    padding: 1rem 0;
+}
+
+.teacher-card {
+    border: 1px solid var(--secondary-gray);
+    transition: transform 0.2s;
+    height: 100%;
+}
+
+.teacher-card:hover {
+    transform: translateY(-5px);
+}
+
+.teacher-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 1rem auto;
+    border: 3px solid var(--primary-color);
+}
+
+.teacher-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.teacher-name {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.department-badge {
+    background-color: var(--secondary-gray);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+
+.birth-date {
+    color: var(--accent-gray);
+    font-size: 0.9rem;
+}
